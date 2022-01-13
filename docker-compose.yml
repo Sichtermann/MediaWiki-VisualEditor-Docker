@@ -14,7 +14,7 @@ services:
     ports:
       - '8000:80'
     volumes:
-      - 'mediawiki_data:/var/www/html'
+      - ./mediawiki_data/LocalSettings.php:/var/www/html/LocalSettings.php:ro
       - 'parsoid_data:/usr/lib/parsoid'
     depends_on:
       - mariadb
